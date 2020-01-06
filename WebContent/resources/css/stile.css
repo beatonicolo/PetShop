@@ -1,0 +1,353 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Bungee|Bungee+Inline|Faster+One|ZCOOL+QingKe+HuangYou');
+
+/********************************RESET CSS*********************************/
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre,
+	ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+/********************GENERAL STYLES***********************/
+html,body {
+	height:100%;
+}
+
+body {
+	padding: 0;
+	background-color: #333333;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: #d9d9d9;
+	margin: 0;
+	font-size:80%;
+}
+
+img {
+	width: 90px;
+}
+
+a{
+	text-decoration:none;
+}
+
+table {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+	width: 100%;
+}
+
+th {
+	background-color: #ff6600;
+	color: #333333;
+	text-align: center;
+}
+
+td {
+	text-align: center;
+}
+
+input[type=button] {
+	background-color: #333333;
+	color: #ff6600;
+	border: none;
+	width: 25%;
+	height: 2em;
+}
+
+input[type=button]:hover {
+	background-color: #e65c00;
+	color: #333333;
+	border-radius: 100%;
+}
+
+input[type=submit] {
+	background-color: #ff6600;
+	color: #333333;
+	border: 1px solid #333333;
+	border-radius: 4px;
+	padding: 1% 2% 1% 2%;
+	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	background-color: #ff8533;
+}
+
+input[type=text], input[type=password] {
+	/*width: 90%;*/
+	border-radius: 3px 3px 3px 3px;
+}
+
+/*********************HEADER****************************/
+@-webkit-keyframes pulse{  
+  0% { color: white; }
+  50% { color: #b3b3b3; }
+}  
+
+.header {
+	margin: 0;
+	padding-bottom:1%;
+	text-align: center;
+	background: #ff6600;
+	color: white; 
+	font-family: 'ZCOOL QingKe HuangYou', cursive;
+	display: block;
+	font-size: 45px;
+	border-style:solid;
+	border-width: 2px 0px 0px 0px;
+	border-color:#333333;
+	-webkit-animation-name: pulse;  
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 5s; 
+}
+
+.mainTitle{
+	margin:auto;
+	width:50%;	
+}
+
+.slogan {
+	color: #cccccc;
+}
+
+/***************************NAVBAR*********************/
+div.menuContainer {
+	top: 0;
+	padding: 0;
+	background-color: white;
+	color: #333333;
+	width: 100%;
+	overflow: auto;
+	position: sticky;
+	margin: 0;
+	font-size:95%;
+}
+
+div.loginContainer, div.logoutField {
+	float: right;
+	text-align: right;
+}
+
+div.navigationField {
+	float: left;
+	height: 100%;
+	margin: 0;
+	border: 0;
+}
+
+input.menubtn {
+	border: none;
+	height: 2em;
+	border-radius: 2px;
+	background: none;
+	cursor: pointer;
+	padding: 0px 15px 0px 15px;
+	font-weight:bold;
+}
+
+input.menubtn:hover {
+	background-color: #e65c00;
+}
+
+.loginField {
+	border: 1px solid #333333;
+	width: 15%;
+}
+
+div.userField, .passField, .logoutField, .logisterField, .navigationField, .loginContainer{
+	display: inline;
+}
+
+/**********************CONTENT****************************/
+
+/*shared format*/
+
+.tdnome {
+	text-align: left;
+}
+.titolopagina {
+	color: #ff6600;
+}
+
+/*container for fixed layout*/
+
+.container {
+	margin: auto;
+	padding: 0px;
+	width: 760px;
+	text-align: left;
+	min-height:67.5%;
+}
+
+/*catalogue*/
+
+.catalogo {
+	margin-top:2%;
+	margin-bottom:3%;
+	width: 100%;
+}
+
+	.catalogo td {
+		padding:0.5%;
+	}
+	
+.classe {
+	font-weight: bold;
+	color: #ff6600;
+}
+
+.quantityButton {
+	cursor: pointer;
+}
+
+
+/*adminpanel*/
+
+#inputURLImmagine {
+	width:147%;
+	margin-left:3%;
+}
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #ff6600;
+	border-radius:15px 15px 1px 1px;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #e65c00;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #cc5200;
+}
+
+/* Style the tab content */
+.contenutoTab {
+	display: none;
+	padding: 6px 3px;
+	border: 1px solid #ccc;
+	border-top: none;
+	text-align: left;
+	border-radius:1px 1px 15px 15px;
+}
+
+tr.active {
+	background-color: #cc5200;
+}
+
+tr.clikable {
+	cursor: pointer;
+}
+
+tr.clikable:hover {
+	background-color: #d9d9d9;
+	color: #333333;
+}
+
+div.idClasseField, div.nomeClasseField, div.submitClasseField, div.nomeSpecieField, div.prezzoUnitarioField,
+	div.idSpecieField, div.selClasseField, div.submitSpecieField{
+		display:inline;
+		padding: 0% 0.5% 0% 0.5%;
+}
+
+div.idClasseField, div.nomeClasseField, div.submitClasseField{
+		padding: 0% 5% 0% 5%;
+}
+
+input#nomeSpecie, input#puSpecie{
+	width:50%;
+}
+
+input#idSpecie{
+	width:30%;
+}
+
+table.tableFormClasse td{
+text-align:center;
+}
+
+table.tableFormSpecie{
+	layout:auto;
+}
+ table.tableFormSpecie td{
+	text-align:center;
+}
+
+input.inputIdClasse {
+	width:35%;
+}
+
+input.btnInserisciClasse,input.btnAnnulla,input.btnInserisciSpecie{
+	width:100px;
+	height:1.5em;
+}
+
+input.inputNomeClasse{
+	width:100%;
+}
+
+table.tableClasse, table.tableSpecie{
+	margin-top:2.5%;
+}
+
+.errormsg{
+	/*float:center;*/
+	padding-top:5px;
+}
+
+/*register*/
+
+.tableRegistrazione {
+	width: 100%
+}
+	.tableRegistrazione td {
+		text-align: left;
+	}
+	
+.nusername, .npassword, .cnpassword {
+	width:90%;
+}
+
+/**************************FOOTER***********************/
+
+.footer {
+	margin-top:1%;
+	clear:both;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #ff6600;
+	color: #e0e0d1;
+	text-align: center;
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
